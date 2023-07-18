@@ -1,0 +1,46 @@
+{%extends "base.html"%} {% block description%} {{article.metadata.description}}
+{% endblock description %} {%block title%} {{article.metadata.title}} {%endblock
+title%} {%block content%}
+<article>
+  <header class="post-header">
+    <span>
+      <h1>{{article.metadata.title}}</h1>
+    </span>
+    <img class="post-img" src="{{article.metadata.cover}}"/>
+  </header>
+  <div class="post">{{article.content}}</div>
+  <footer>
+    <div id="article-footer">
+
+    </div>
+  </footer>
+</article>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script>
+  hljs.highlightAll();
+  function goToTarget(item) {
+    item.scrollIntoView({ behavior: "smooth" });
+  }
+</script>
+<script>
+  window.onload = () => {
+    const year = new Date().getFullYear()
+    document.getElementById('article-footer').innerText = `{{context.config.name}} - ${year}`
+  }
+</script>
+<style>
+  .post-header {
+    text-align: center;
+  }
+  .post-img{
+    border-radius: 10px;
+  }
+  #article-footer {
+    text-align: center;
+  }
+</style>
+{%endblock content%}

@@ -1,0 +1,16 @@
+{%extends "base.html"%} {%block title%} Blog {%endblock%} 
+{%block content%}
+{% for article in context.pages %}
+<article>
+  <header>
+    <h3>{{article.metadata.title}}</h3>
+  </header>
+  <span style="text-align:justify;">
+    {{article.metadata.description}}
+  </span>
+  <footer>
+    <a href="/blog/{{article.metadata.slug}}.html">Read this article</a>
+  </footer>
+</article>
+{% endfor %}
+{%endblock content%}

@@ -1,0 +1,44 @@
+{%extends "base.html"%} {%block content%}
+<article>
+  <div class="profile">
+    <img class="profile_picture" src="{{context.config.profile_picture}}" />
+  </div>
+  <div class="descreption">
+    <h1> Hi I'm Mohamed <span>&#128075;</span> </h1>
+  </div>
+</article>
+<article>
+    <div class="skills">
+        <h3>I do stuffs with Python <span>&#128155;</span></h3>
+        <h3>I like Vuejs <span>&#128154;</span></h3>
+        <h3>I Love Django <span>&#128163;</span></h3>
+    </div>
+<p>This is not my CV, here I share some thought im my <a href="/blog">Blog</a></p>
+</article>
+<style>
+    .profile{
+        text-align: center;
+}
+  .profile_picture {
+    max-width: 40vw;
+    border-radius: 50%;
+  }
+  .descreption{
+    text-align: center;
+    padding-top: 3rem;
+  }
+  .skills{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @media screen and (max-width: 480px) {
+    .skills {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+  }
+</style>
+{%endblock content%}

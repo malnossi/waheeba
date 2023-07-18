@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <base href="{{context.config.base}}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/pico.min.css" />
+    <meta name="description" content="{% block description %}{% endblock description %}">
+    <title>{%block title%} Mohamed AL NOSSIRAT {%endblock title%}</title>
+  </head>
+  <body>
+    {% include '_navbar.html' %}
+    <div class="container-fluid">
+        {% block content %} {% endblock content %}
+    </div>
+  </body>
+</html>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon&display=swap");
+  html,body {
+    font-family: "IM Fell French Canon", serif !important;
+  }
+</style>

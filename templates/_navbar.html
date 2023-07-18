@@ -1,0 +1,10 @@
+<nav class="container">
+    <ul>
+      <li><strong>{{context.config.name}}</strong></li>
+    </ul>
+    <ul>
+      {% for link in context.config.links %}
+      <li><a href="{{link.destination}}">{{link.title}}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>

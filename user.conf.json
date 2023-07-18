@@ -1,0 +1,15 @@
+{
+    "name": "Mohamed Al Nossirat",
+    "profile_picture": "/assets/images/mohamedalnossirat.jpeg",
+    "base":"http://localhost:8888/",
+    "links": [
+        {
+            "title": "Home",
+            "destination": "/"
+        },
+        {
+            "title": "Blog",
+            "destination": "/blog"
+        }
+    ]
+}
